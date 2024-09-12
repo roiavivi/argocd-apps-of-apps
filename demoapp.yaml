@@ -16,3 +16,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  revisionHistoryLimit: 10
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
